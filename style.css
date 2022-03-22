@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root{
+    --dark-cyan:hsl(185, 75%, 39%);
+    --very-dark-blue:hsl(229, 23%, 23%);
+    --grayish-blue:hsl(227, 10%, 46%);
+
+    --dark-grey:hsl(0, 0%, 59%);
+
+    --font-sz:18px;
+    --font-fmly:'Kumbh Sans', sans-serif;
+
+}
+
+*, 
+::before,
+::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--dark-cyan);
+    position: relative;
+    font-family: var(--font-fmly);
+    color: var(--very-dark-blue);
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.top-circle{
+    position: absolute;
+    right:350px;
+    top: -200px;
+    z-index: -2;
+}
+
+.bottom-circle{
+    position: absolute;
+    bottom: -350px;
+    right:  -450px;
+    z-index: -2;
+}
+
+.age{
+    font-weight: 400;
+}
+
+
+.container{
+    position: absolute;
+    background-color: white;
+    width: 80%;
+    border-radius: 15px;
+    overflow: hidden;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 25vh;
+    z-index: 2;
+}
+
+.bg-pattern{
+    background-image: url("./images/bg-pattern-card.svg");
+    height: 150px;
+    width: 100%;
+}
+
+.profile-picture{
+    position: absolute;
+    padding: 5px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    border-radius: 50%;
+    background-color: white;
+    display: grid;
+    justify-content: center;
+    top: 90px;
+    align-items: center;
+}
+
+.profile-picture img{
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.name-age-location{
+    margin-top: 70px;
+    margin-bottom: 30px;
+    
+}
+
+.name-age-location p{
+    margin-top: 15px;
+}
+.statistics{
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    border-top: 1px solid var(--dark-grey);
+}
+span{
+    color: var(--dark-grey);
+}
+.num p{
+    font-size: 10px;
+}
+p{
+    color: var(--dark-grey);
+}
+
+@media only screen and (min-width: 600px) {
+    .container{
+        width: 450px;
+    }
+
+    .top-circle{
+        right: 70%;
+    }
+
+    .bottom-circle{
+        right: 10%;
+        bottom: -60%;
+    }
+  }
